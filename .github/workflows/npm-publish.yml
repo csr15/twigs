@@ -30,7 +30,6 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - run: cd packages/react-components
-      - run: npm publish
+      - run: cd packages/react-components && npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
